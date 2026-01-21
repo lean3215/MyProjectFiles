@@ -1,0 +1,184 @@
+.rts-match-result-section.inner .match-single.sm .match-single-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+    position: relative;
+}
+
+/* Login page styles */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg,#f6fbff 0%, #ffffff 100%);
+    padding: 40px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(20,30,60,0.08);
+    padding: 34px;
+    text-align: center;
+}
+
+.login-logo img {
+    width: 110px;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.login-title {
+    font-size: 20px;
+    margin: 0 0 18px 0;
+    color: #0f1724;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border: 1px solid #d6dbe6;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-row { display:flex; align-items:center; justify-content:space-between; margin:8px 0 16px 0; }
+.remember { font-size:13px; color:#4b5563; }
+.forgot { font-size:13px; color:#1e88e5; text-decoration:none }
+.btn-login {
+    width:100%; padding:12px 16px; border-radius:8px; border:0; background:#1e88e5; color:#fff; font-weight:600; cursor:pointer; font-size:15px;
+}
+.btn-login:hover{ filter:brightness(.98) }
+.signup { margin-top:14px; font-size:13px; color:#6b7280 }
+.signup a { color:#1e88e5; text-decoration:none }
+
+@media (max-width:480px){
+    .login-card{ padding:22px; border-radius:10px }
+    .login-logo img { width:88px }
+}
+
+.rts-match-result-section.inner .match-single.sm .match-scores {
+    display: grid;
+    /* 三列布局：左队名区域 | 左队徽+VS+右队徽 | 右队名区域 */
+    grid-template-columns: 200px 220px 200px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0;
+}
+
+.rts-match-result-section.inner .match-single.sm .club {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* 重置所有margin */
+.rts-match-result-section.inner .match-single.sm .club .club-logo.mr--20,
+.rts-match-result-section.inner .match-single.sm .club .club-logo.ml--20 {
+    margin: 0 !important;
+}
+
+.rts-match-result-section.inner .match-single.sm .club:not(.club2) {
+    padding-right: 20px;
+}
+
+.rts-match-result-section.inner .match-single.sm .club.club2 {
+    padding-left: 20px;
+}
+
+.rts-match-result-section.inner .match-single.sm .club .club-name {
+    font-size: 16px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.rts-match-result-section.inner .match-single.sm .club:not(.club2) .club-name {
+    text-align: right;
+}
+
+.rts-match-result-section.inner .match-single.sm .club.club2 .club-name {
+    text-align: left;
+}
+
+.rts-match-result-section.inner .match-single.sm .club .club-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    position: absolute;
+}
+
+.rts-match-result-section.inner .match-single.sm .club:not(.club2) .club-logo {
+    right: -40px;
+}
+
+.rts-match-result-section.inner .match-single.sm .club.club2 .club-logo {
+    left: -40px;
+}
+
+.rts-match-result-section.inner .match-single.sm .club .club-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.rts-match-result-section.inner .match-single.sm .colon {
+    text-align: center;
+    font-size: 20px;
+    width: 100px;
+    grid-column: 2;
+    justify-self: center;
+}
+
+@media (max-width: 768px) {
+    .rts-match-result-section.inner .match-single.sm .match-scores {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .rts-match-result-section.inner .match-single.sm .club,
+    .rts-match-result-section.inner .match-single.sm .club.club2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .rts-match-result-section.inner .match-single.sm .club .club-name,
+    .rts-match-result-section.inner .match-single.sm .club.club2 .club-name {
+        text-align: center;
+        margin-top: 70px;
+    }
+    
+    .rts-match-result-section.inner .match-single.sm .club .club-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .rts-match-result-section.inner .match-single.sm .club:not(.club2) .club-logo,
+    .rts-match-result-section.inner .match-single.sm .club.club2 .club-logo {
+        right: auto;
+        left: 50%;
+    }
+} 

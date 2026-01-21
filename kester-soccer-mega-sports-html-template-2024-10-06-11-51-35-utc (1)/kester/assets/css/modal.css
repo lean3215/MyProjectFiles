@@ -1,0 +1,103 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+#modal-card-element {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    transition: border-color 0.3s;
+}
+
+#modal-card-element:focus-within {
+    border-color: #6f4e37;
+    box-shadow: 0 0 0 1px rgba(111, 78, 55, 0.2);
+}
+
+#modal-submit-payment {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #3E5879;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#modal-submit-payment:hover {
+    background-color: #2d3e50;
+}
+
+#modal-submit-payment:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#modal-card-errors {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Loading animation for the payment processing */
+.processing-indicator {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
